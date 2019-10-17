@@ -12,10 +12,15 @@ and open the template in the editor.
         <title>Query Practice</title>
     </head>
     <body>
-    
+
         <h1>Welcome to the Query Practice Page</h1> 
         <p>Please read the instructions and practice your queries</p>
-        
-        
+
+        <form action="control/practice.php" method="post">
+            <label for="query">Enter Query</label><br>
+            <input name="query" type="text" id="query"/><br>
+            <input type="submit" name="submit" value="Submit" />
+            <input type="hidden" name="action" value="query">
+        </form>
     </body>
 </html>

@@ -14,5 +14,31 @@ $query = filter_input(INPUT_POST, 'query', FILTER_SANITIZE_STRING);
 echo $query;
 
 $result = getTest($query);
-var_dump($result);
+
+echo '<table border="1">';
+echo '<tr>';
+foreach($result[0] as $key => $value) {
+    echo '<td>';
+    echo $key;
+    echo '</td>';
+}
+echo '</tr>';
+foreach($result as $row) {
+    echo '<tr>';
+    foreach($row as $column) {
+        echo '<td>';
+        echo $column;
+        echo '</td>';
+    }
+    echo '</tr>';
+}
+echo '</table>';
+
+
+
+
+
+
+
+ // var_dump($result); 
 

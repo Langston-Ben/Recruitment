@@ -17,10 +17,11 @@ and open the template in the editor.
         <p>Please read the instructions and practice your queries</p>
 
         <form action="control/practice.php" method="post">
-            <label for="query">Enter Query</label><br>
-            <input name="query" type="text" id="query"/><br>
+            <label for="query">Enter Query</label><br><br>
+            <input name="query" type="text" size="100" id="query"/><br><br>
             <input type="submit" name="submit" value="Submit" />
             <input type="hidden" name="action" value="query">
         </form>
     </body>
 </html>
+ 

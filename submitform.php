@@ -6,10 +6,21 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>Submission Page</title>
+      
+        <?php $ptitle = "Form Submission";
+        include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/head.php'; ?>
     </head>
+    
     <body>
+        
+        <header>
+            <?php include $_SERVER['DOCUMENT_ROOT'].'/Recruitment/common/header.php'; ?>
+        </header>
+
+        <nav>
+            <?php $page='home'; include $_SERVER['DOCUMENT_ROOT'].'/Recruitment/common/nav.php'; ?> 
+         <!--   <?php echo $navList; ?> -->
+        </nav>
 
         <main>
             <h1 class="entryform">Candidate Submission</h1>
@@ -47,6 +58,12 @@ and open the template in the editor.
                 </fieldset>
             </form>
         </main>
+        <footer><br><br>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/recruitment/common/footer.php'; ?>
+                <p>Last updated:
+                    <?php echo date("j F, Y", getlastmod()) ?>
+                </p>
+            </footer>
 
     </body>
 </html>

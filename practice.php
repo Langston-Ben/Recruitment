@@ -8,8 +8,8 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>Query Practice</title>
+        <?php $ptitle = "Database Practice";
+        include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/head.php'; ?>
         <script>
 function goBack() {
   window.history.back()
@@ -17,6 +17,15 @@ function goBack() {
 </script>
     </head>
     <body>
+        
+        <header>
+            <?php include $_SERVER['DOCUMENT_ROOT'].'/Recruitment/common/header.php'; ?>
+        </header>
+
+        <nav>
+            <?php $page='home'; include $_SERVER['DOCUMENT_ROOT'].'/Recruitment/common/nav.php'; ?> 
+         <!--   <?php echo $navList; ?> -->
+        </nav>
 
         <h1>Welcome to the Query Practice Page</h1> 
         <p>Please read the instructions and practice your queries</p>
@@ -32,7 +41,12 @@ function goBack() {
             <input type="submit" name="submit" value="Submit" /> 
             
         </form>
-        
+    <!--    <footer><br><br>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/recruitment/common/footer.php'; ?>
+                <p>Last updated:
+                    <?php echo date("j F, Y", getlastmod()) ?>
+                </p>
+            </footer> -->
     </body>
 </html>
  

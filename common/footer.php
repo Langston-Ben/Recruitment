@@ -1,4 +1,8 @@
 <aside>
-        &copy; The Church of Jesus Christ of Latter-day Saints, All rights reserved.
+    <img src="images/ldslogo.gif" alt="Logo" width="130"><br>
+    
 </aside>
-<p class="footer-bar">All images used are believed to be in "Fair Use". Please notify the author if any are not and they will be removed.</p>
+<p class="footer-bar">Terms of Use (Updated 2018-09-01)  Privacy Notice (Updated 2018-09-01)  Cookie Preferences<br><br>
+&copy; By Intellectual Reserve, Inc. All rights reserved.</p>
+
+

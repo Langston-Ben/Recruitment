@@ -18,9 +18,7 @@ function goBack() {
     </head>
     <body>
         
-        <header>
-            <?php include $_SERVER['DOCUMENT_ROOT'].'/Recruitment/common/header.php'; ?>
-        </header>
+  
 
         <nav>
             <?php $page='home'; include $_SERVER['DOCUMENT_ROOT'].'/Recruitment/common/nav.php'; ?> 
@@ -40,13 +38,15 @@ function goBack() {
             <input name="query" type="text" size="100"/><br><br>
             <input type="submit" name="submit" value="Submit" /> 
             
-        </form>
-    <!--    <footer><br><br>
+</form><br>
+    <?php if (isset($message)) {echo $message;} ?>
+    <?php if (isset($querylist)) {echo $querylist;} ?><br>
+  <!--     <footer><br><br>
                 <?php include $_SERVER['DOCUMENT_ROOT'] . '/recruitment/common/footer.php'; ?>
                 <p>Last updated:
                     <?php echo date("j F, Y", getlastmod()) ?>
                 </p>
-            </footer> -->
+            </footer>  -->
     </body>
 </html>
  

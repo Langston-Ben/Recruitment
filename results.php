@@ -21,8 +21,11 @@ and open the template in the editor.
   <!--      </nav> -->
     
         <h1>Results:</h1> 
+        <div class="overflow"><?php if (isset($query)) {echo $query;} ?></div>
          <?php if (isset($message)) {echo $message;} ?>
         <?php if (isset($querylist)) {echo $querylist;} ?><br>
+        
+      
        
       
         

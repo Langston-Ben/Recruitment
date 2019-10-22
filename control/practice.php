@@ -5,11 +5,26 @@ require_once '../model/queries.php';
 require_once '../practice.php';
 
 
-$action = 'action';
+
+
+$action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
+
 
 //$query = filter_input(INPUT_POST, 'query', FILTER_SANITIZE_STRING);
 
+switch ($action) {
+    
+    
+    case 'newquery':
+         include 'practice.php';
+         break;
+    
+    case 'query':    
+
+
 $query = $_POST['query'];
+    
+//    echo $query;
 
 
 if (empty($query)) {
@@ -66,6 +81,11 @@ exit;
     include '../results.php';
     
 }
+
+
+
+}
+
 
 
 //    echo $querylist;

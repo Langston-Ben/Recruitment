@@ -10,7 +10,7 @@ and open the template in the editor.
 html {
     
     background-color: black;
-    background-image: url("../images/temple4.jpg");
+    background-image: url("/Recruitment/images/temple4.jpg");
     
 }
 
@@ -25,6 +25,7 @@ body {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0.95;
 }
 
 nav ul {
@@ -47,14 +48,20 @@ nav li a {
   text-decoration: none;
 }
 
-nav li a:hover:not(.active) {
-  background-color: #111;
+/*nav ul li a.active {
+  background-color: #4CAF50;
+  color: white;
 }
 
-nav ul li.active a {
+
+nav li a:hover:not(.active) {
+  background-color: #111;
+}*/
+
+/*nav ul li.active a {
   background-color: #4CAF50;
  
-}
+}*/
 
 footer {
     
@@ -86,5 +93,140 @@ header {
     text-align: center;
     border-bottom: 1px solid;
     font-size: .7em;
+    
+}
+
+fieldset label input {
+    
+    /*width: 80%;*/
+   
+    
+   
+}
+
+.practice input {
+    
+    width: 80%;
+    /*height: 150px;*/
+    
+}
+
+
+.submit {
+    /*background-color: black;*/
+    color: white;
+    border-radius: 10px;
+    font-weight: 800;
+    padding: 5px;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-weight: 800;
+    padding: 5px;
+   
+    
+}
+
+button[type=reset] {
+
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-weight: 800;
+    padding: 5px;
+}
+
+#button {
+
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-weight: 800;
+    padding: 5px;
+}
+
+figure {
+    margin-top: -180px;
+    float: right;
+}
+
+textarea {
+    min-width:200px;
+    width:80%;
+    max-width:80%;
+    resize:none;
+    font-size:18px;
+    overflow-x:hidden;
+    overflow-y:auto;    
+    min-height:1em;
+    height:1em;
+    padding:2px;
+    max-height:20em;    
+/*    position:absolute;*/
+    left:0px;
+}
+
+.textarea-container {
+  position: relative;
+  /* you should change this*/
+  width: 80%;
+}
+
+textarea, .textarea-size {
+  min-height: 25px;
+  /* need to manually set font and font size */
+  font-family: sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 4px;
+  border: 1px solid;
+  
+
+  overflow: hidden;
+  width: 100%;
+}
+
+textarea {
+  height: 70%;
+  position: absolute;
+  resize:none;
+
+  /*
+  "pre" or "preline" or "normal" fixes Chrome issue where
+    whitespace at end of lines does not trigger a line break.
+  However, it causes the text to exhibit the behavior seen with
+    "pre" that is described below.
+   */
+  white-space: normal;
+}
+
+.textarea-size {
+  visibility: hidden;
+
+  /*
+  Pre-wrap: preserve spacing and newlines, but wrap text.
+  Pre: preserve spacing and newlines but don't wrap text.
+
+  "pre" does not wrap well on Firefox, even with word-wrap:break-word.
+  "pre" on Chrome works with word-wrap, but exhibits different behavior:
+  Instead of entire words being moved to the next line for wrapping,
+  the browser will cut words in the middle for wrapping.
+  "pre-line" has Firefox issues
+  */
+  white-space: pre-wrap;
+  /* Required for wrapping lines in Webkit,
+    but not necessary in Firefox if you have white-space wrapping
+    (pre-wrap, normal, pre-line) already set */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.overflow {
+    
+    word-wrap: break-word;
+    
     
 }

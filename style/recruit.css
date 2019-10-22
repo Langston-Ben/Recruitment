@@ -153,7 +153,7 @@ figure {
     float: right;
 }
 
-textarea {
+/*textarea {
     min-width:200px;
     width:80%;
     max-width:80%;
@@ -165,19 +165,19 @@ textarea {
     height:1em;
     padding:2px;
     max-height:20em;    
-/*    position:absolute;*/
+    position:absolute;
     left:0px;
 }
 
 .textarea-container {
   position: relative;
-  /* you should change this*/
+   you should change this
   width: 80%;
 }
 
 textarea, .textarea-size {
   min-height: 25px;
-  /* need to manually set font and font size */
+   need to manually set font and font size 
   font-family: sans-serif;
   font-size: 18px;
   box-sizing: border-box;
@@ -194,19 +194,19 @@ textarea {
   position: absolute;
   resize:none;
 
-  /*
+  
   "pre" or "preline" or "normal" fixes Chrome issue where
     whitespace at end of lines does not trigger a line break.
   However, it causes the text to exhibit the behavior seen with
     "pre" that is described below.
-   */
+   
   white-space: normal;
 }
 
 .textarea-size {
   visibility: hidden;
 
-  /*
+  
   Pre-wrap: preserve spacing and newlines, but wrap text.
   Pre: preserve spacing and newlines but don't wrap text.
 
@@ -215,11 +215,11 @@ textarea {
   Instead of entire words being moved to the next line for wrapping,
   the browser will cut words in the middle for wrapping.
   "pre-line" has Firefox issues
-  */
+  
   white-space: pre-wrap;
-  /* Required for wrapping lines in Webkit,
+   Required for wrapping lines in Webkit,
     but not necessary in Firefox if you have white-space wrapping
-    (pre-wrap, normal, pre-line) already set */
+    (pre-wrap, normal, pre-line) already set 
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -229,4 +229,12 @@ textarea {
     word-wrap: break-word;
     
     
+}*/
+
+textarea {
+	min-height: 5em;
+	max-height: 50vh;
+	width: 80%;
+        font-size: 16px;
+        
 }

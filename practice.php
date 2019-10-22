@@ -16,21 +16,29 @@ and open the template in the editor.
                 window.history.back()
             }
             
-            var textContainer, textareaSize, input;
-var autoSize = function () {
-  // also can use textContent or innerText
-  textareaSize.innerHTML = input.value + '\n';
+            var autoExpand = function (field) {
+
+	// Reset field height
+	field.style.height = 'inherit';
+
+	// Get the computed styles for the element
+	var computed = window.getComputedStyle(field);
+
+	// Calculate the height
+	var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+	             + parseInt(computed.getPropertyValue('padding-top'), 10)
+	             + field.scrollHeight
+	             + parseInt(computed.getPropertyValue('padding-bottom'), 10)
+	             + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+	field.style.height = height + 'px';
+
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-  textContainer = document.querySelector('.textarea-container');
-                    textareaSize = textContainer.querySelector('.textarea-size');
-                    input = textContainer.querySelector('textarea');
-
-                    autoSize();
-                    input.addEventListener('input', autoSize);
-                });
-
+document.addEventListener('input', function (event) {
+	if (event.target.tagName.toLowerCase() !== 'textarea') return;
+	autoExpand(event.target);
+}, false);
 
         </script>
     </head>
@@ -70,7 +78,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
         <!--    <div class="practice"><input name="query" type="text" size="100"/><br><br></div> -->
             
             <div class="textarea-container">
-  <
+  
  
             
             

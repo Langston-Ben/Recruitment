@@ -12,20 +12,29 @@ and open the template in the editor.
         ?>
 
         <script>
-            var textContainer, textareaSize, input;
-            var autoSize = function () {
-                // also can use textContent or innerText
-                textareaSize.innerHTML = input.value + '\n';
-            };
+           var autoExpand = function (field) {
 
-            document.addEventListener('DOMContentLoaded', function () {
-                textContainer = document.querySelector('.textarea-container');
-                textareaSize = textContainer.querySelector('.textarea-size');
-                input = textContainer.querySelector('textarea');
+	// Reset field height
+	field.style.height = 'inherit';
 
-                autoSize();
-                input.addEventListener('input', autoSize);
-            });
+	// Get the computed styles for the element
+	var computed = window.getComputedStyle(field);
+
+	// Calculate the height
+	var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+	             + parseInt(computed.getPropertyValue('padding-top'), 10)
+	             + field.scrollHeight
+	             + parseInt(computed.getPropertyValue('padding-bottom'), 10)
+	             + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+	field.style.height = height + 'px';
+
+};
+
+document.addEventListener('input', function (event) {
+	if (event.target.tagName.toLowerCase() !== 'textarea') return;
+	autoExpand(event.target);
+}, false);
         </script>
     </head>
 

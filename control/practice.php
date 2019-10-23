@@ -6,8 +6,9 @@ require_once '../practice.php';
 
 
 
-
 $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
+
+
 
 
 //$query = filter_input(INPUT_POST, 'query', FILTER_SANITIZE_STRING);
@@ -82,6 +83,13 @@ exit;
     
 }
 
+    case 'createform':
+        
+      $question1 = $_POST['question1'];  
+        
+      include '../pdf.php';
+      break;
+    
 
 
 }

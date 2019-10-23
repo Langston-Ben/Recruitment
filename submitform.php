@@ -56,7 +56,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
             <a href="/Recruitment/control/practice.php?action=newquery">Practice Page</a><br><br>
 
             <!--  <form action="thankyou.php" method="post" target="_self"> -->
-            <form action="mailto:blang77@aol.com" method="post" enctype="text/plain">
+            <form action="/Recruitment/control/pdfcontrol.php" method="post">
                 <fieldset>
                     <legend>Please answer and submit the following:</legend><br>
                     <label>Please Enter Your Email Address For Tracking:<br> <input type="email" name="email" placeholder="joseph@smith.com"  size="40" maxlength="80">
@@ -69,28 +69,30 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
                         <textarea class="autofit" name="question2" required></textarea><div class="textarea-size"></div></div><br>
 
                     <div class="textarea-container"><br><br>Question 3<br>Please Enter Your Solution For Question 3<br>
-                        <textarea class="autofit" name="question1"  required></textarea><div class="textarea-size"></div></div><br>
+                        <textarea class="autofit" name="question3"  required></textarea><div class="textarea-size"></div></div><br>
 
                     <div class="textarea-container"><br><br>Question 4<br>Please Enter Your Solution For Question 4<br>
-                        <textarea class="autofit" name="question2" required></textarea><div class="textarea-size"></div></div><br>
+                        <textarea class="autofit" name="question4" required></textarea><div class="textarea-size"></div></div><br>
 
                     <div class="textarea-container"><br><br>Question 5<br>Please Enter Your Solution For Question 5<br>
-                        <textarea class="autofit" name="question1"  required></textarea><div class="textarea-size"></div></div><br> 
+                        <textarea class="autofit" name="question5"  required></textarea><div class="textarea-size"></div></div><br> 
 
                     <div class="textarea-container"><br><br>Question 6<br>Please Enter Your Solution For Question 6<br>
-                        <textarea class="autofit" name="question2" required></textarea><div class="textarea-size"></div></div><br>
+                        <textarea class="autofit" name="question6" required></textarea><div class="textarea-size"></div></div><br>
 
                     <div class="textarea-container"><br><br>Question 7<br>Please Enter Your Solution For Question 7<br>
-                        <textarea class="autofit" name="question1"  required></textarea><div class="textarea-size"></div></div><br>
+                        <textarea class="autofit" name="question7"  required></textarea><div class="textarea-size"></div></div><br>
 
                     <div class="textarea-container"><br><br>Question 8<br>Please Enter Your Solution For Question 8<br>
-                        <textarea class="autofit" name="question2" required></textarea><div class="textarea-size"></div></div><br>
+                        <textarea class="autofit" name="question8" required></textarea><div class="textarea-size"></div></div><br>
 
                     <div class="textarea-container"><br><br>Question 9<br>Please Enter Your Solution For Question 9<br>
-                        <textarea class="autofit" name="question1"  required></textarea><div class="textarea-size"></div></div><br> 
+                        <textarea class="autofit" name="question9"  required></textarea><div class="textarea-size"></div></div><br> 
 
                     <div class="textarea-container"><br><br>Question 10<br>Please Enter Your Solution For Question 10<br>
-                        <textarea class="autofit" name="question2" required></textarea><div class="textarea-size"></div></div><br><br><br>    
+                        <textarea class="autofit" name="question10" required></textarea><div class="textarea-size"></div></div><br><br><br>    
+                        
+                        
 
 
                 </fieldset>
@@ -100,7 +102,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
 
                     <div class="textarea-container"><br><br>Additional Comments:<br />
                         <textarea class="autofit" id="comments"></textarea><div class="textarea-size"></div></div><br><br><br> 
-                    <p><input class="submit" type="submit" value="Submit" />
+                     <input class="submit" type="submit" value="Submit">
+                        <input type="hidden" name="action" value="createform">
 
                         <button type="reset" value="Reset">Reset</button>
                 </fieldset>

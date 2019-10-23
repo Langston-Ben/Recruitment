@@ -54,7 +54,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
             <!--   <?php echo $navList; ?> -->
         </nav>
 
-        <h1>Welcome to the Query Practice Page</h1> 
+        <h1>Welcome to the Query Practice Page</h1>
         <p>Please read the instructions and practice your queries</p>
         
         <p>The database contains the following tables:</p>
@@ -64,14 +64,19 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
             <li>Address</li>
             <li>Vehicle</li>
         </ul>
+        
+       
 
   <!--      <figure>
         <img src="/Recruitment/images/databasetemplate.jpg" alt="Database Template" width="300">
         </figure> -->
+  
         
 
 
         <button onclick="goBack()" id="button">Reload Previous Query</button><br><br>
+        
+         
 
         <form action="/Recruitment/control/practice.php" method="post"> 
 
@@ -94,6 +99,15 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
         <?php if (isset($querylist)) {
             echo $querylist;
         } ?><br>
+        
+        <div class="database">
+        
+            <img src="/Recruitment/images/database.jpg" alt="database" >
+        </div>
+        
+        
+        
+        
         <!--     <footer><br><br>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/recruitment/common/footer.php'; ?>
                       <p>Last updated:

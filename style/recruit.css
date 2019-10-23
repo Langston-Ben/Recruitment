@@ -238,3 +238,23 @@ textarea {
         font-size: 16px;
         
 }
+.database {
+    
+    margin-left: auto;
+    margin-right:auto;
+    
+}
+.database img {
+    
+     display: block;
+     border: 2px solid black;
+     margin-right: auto;
+     margin-left: auto;
+     width: 80%;
+ 
+    
+  
+     
+    
+    
+}

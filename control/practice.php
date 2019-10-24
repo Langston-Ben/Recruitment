@@ -80,7 +80,7 @@ exit;
 } catch (PDOException $ex) {
     $message="<p>Your entry is not correct, try again please.</p>";
     include '../results.php';
-    
+    break;
 }
 
 //    case 'createform':

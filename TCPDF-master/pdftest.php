@@ -89,10 +89,6 @@ ob_clean();
 $attachdata = $pdf->Output('foo.pdf','S'); //  return the document as a string (name is ignored)
 $pdf->Close();
 
-
-
-//<?php
-
 require_once "../mailer/PHPMailer-master/src/PHPMailer.php";
 require_once "../mailer/PHPMailer-master/src/SMTP.php";
 require_once "../mailer/PHPMailer-master/src/Exception.php";
@@ -139,5 +135,10 @@ if(!$mail->send())
 } 
 else 
 {       //need include statement
-    echo "Message has been sent successfully";
+    
+ $message = "<p>Thank you, $email, the message has been sent successfully.</p>";
+            include '../results.php';
+            exit;   
+    
+//    echo "Message has been sent successfully";
 }

@@ -10,17 +10,17 @@ $pdf->SetFont('times', 'B', 14);
 $pdf->Image('../images/ldslogo.gif',80,10,50,18);
 
 $pdf->Cell(34, 25, '', 0, 1);
-$pdf->Cell(132, 5, 'The Church of Jesus Christ of Latter-day Saints', 0, 0);
-$pdf->Cell(59, 5, 'Database Recruitment', 5, 1);
+$pdf->Cell(120, 5, 'The Church of Jesus Christ of Latter-day Saints', 0, 0);
+$pdf->Cell(50, 5, 'Database Recruitment', 5, 1);
 
 $pdf->SetFont('times','', 14);
 
-$pdf->Cell(132, 5, '120 N 200 W', 0, 0);
-$pdf->Cell(29, 5, "Email: $email", 0, 1);
+$pdf->Cell(120, 5, '120 N 200 W', 0, 0);
+$pdf->Cell(50, 5, "Email: $email", 0, 1);
 
-$pdf->Cell(132, 5, 'Salt Lake City, UT 84103', 0, 0);
+$pdf->Cell(120, 5, 'Salt Lake City, UT 84103', 0, 0);
 $date = date("m/j/Y");
-$pdf->Cell(29, 5, "Date:  $date", 0, 1);
+$pdf->Cell(50, 5, "Date:  $date", 0, 1);
 
 $pdf->Cell(34, 5, '', 0, 1);
 $pdf->SetFont('times', 'B', 14);
@@ -85,8 +85,59 @@ $pdf->Cell(190 , 5,'',0,1);
 
 
 ob_clean();
-$pdf->Output();
+//$pdf->Output();
+$attachdata = $pdf->Output('foo.pdf','S'); //  return the document as a string (name is ignored)
 $pdf->Close();
 
 
 
+//<?php
+
+require_once "../mailer/PHPMailer-master/src/PHPMailer.php";
+require_once "../mailer/PHPMailer-master/src/SMTP.php";
+require_once "../mailer/PHPMailer-master/src/Exception.php";
+
+
+
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+
+//Enable SMTP debugging. 
+$mail->SMTPDebug = 0;                               
+//Set PHPMailer to use SMTP.
+$mail->isSMTP();            
+//Set SMTP host name                          
+$mail->Host = "mail.benjaminlangston.com";
+//Set this to true if SMTP host requires authentication to send email
+$mail->SMTPAuth = true;                          
+//Provide username and password     
+$mail->Username = "recruitment@benjaminlangston.com";                 
+$mail->Password = 'CqdsG2V!fy^[p';                           
+//If SMTP requires TLS encryption then set it
+$mail->SMTPSecure = "tls";                           
+//Set TCP port to connect to 
+$mail->Port = 587;                                   
+
+$mail->From = "recruitment@benjaminlangston.com";
+$mail->FromName = "Ben Langston";
+
+$mail->addAddress("benlangston2009@gmail.com", "Interviewer");
+
+$mail->isHTML(true);
+
+$mail->Subject = "Subject Text";
+$mail->Body = "<i>Mail body in HTML</i>";
+$mail->AltBody = "This is the plain text version of the email content";
+
+//$mail->addAttachment("file.txt", "File.txt");        
+
+
+$mail->AddStringAttachment($attachdata, 'Filename.pdf');
+
+if(!$mail->send()) 
+{
+    echo "Mailer Error: " . $mail->ErrorInfo;
+} 
+else 
+{       //need include statement
+    echo "Message has been sent successfully";
+}

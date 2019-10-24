@@ -83,16 +83,16 @@ exit;
     
 }
 
-    case 'createform':
-        
-      $question1 = $_POST['question1'];  
-        
-      include '../pdf.php';
-      break;
-    
-
-
-}
+//    case 'createform':
+//        
+//      $question1 = $_POST['question1'];  
+//        
+//      include '../pdf.php';
+//      break;
+//    
+//
+//
+//}
 
 
 
@@ -125,3 +125,4 @@ exit;
 
 // var_dump($result); 
 
+}

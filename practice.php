@@ -55,6 +55,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
         </nav>
 
         <h1>Welcome to the Query Practice Page</h1>
+        
+         <div class="database">
+        
+            <img src="/Recruitment/images/database.jpg" alt="database" >
+        </div>
+        
         <p>Please read the instructions and practice your queries</p>
         
         <p>The database contains the following tables:</p>
@@ -100,10 +106,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
             echo $querylist;
         } ?><br>
         
-        <div class="database">
-        
-            <img src="/Recruitment/images/database.jpg" alt="database" >
-        </div>
+       
         
         
         

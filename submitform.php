@@ -50,6 +50,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
             <!--   <?php echo $navList; ?> -->
         </nav>
 
+        
+        <?php if (isset($message)) {echo $message;}?>
+        
+        
         <main>
             <h1 class="entryform">Candidate Submission</h1>
             <p>Click Here To Practice Your Queries</p>

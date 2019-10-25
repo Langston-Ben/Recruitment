@@ -35,11 +35,16 @@ if (empty($query)) {
             exit;
         }
 
+$querylength= strlen($query);
 
 
+if ($querylength > 201){
+$message = "<br><redtext> Your Query Exceeds the limit of 200 characters,<br>Please Try Again.<br><br>"
+        . "</redtext>";
+    include '../results.php';
+    exit;
 
-
-
+}
 //$query = "Select * from test where name = 'Jimmy Page'";
 //$query=(query);
 

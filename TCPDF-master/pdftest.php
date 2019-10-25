@@ -116,18 +116,20 @@ $mail->Port = 587;
 $mail->From = "recruitment@benjaminlangston.com";
 $mail->FromName = "Ben Langston";
 
-$mail->addAddress("benlangston2009@gmail.com", "Interviewer");
+$mail->addAddress("benlangston2009@gmail.com", "Recruitment Officer");
 
 $mail->isHTML(true);
 
-$mail->Subject = "Subject Text";
-$mail->Body = "<i>Mail body in HTML</i>";
-$mail->AltBody = "This is the plain text version of the email content";
+$mail->Subject = "Recruitment assessment from '$email'";
+$mail->Body = "<span style='font-family:Verdana, Arial, Helvetica, sans-serif; font-size:14px'><p>This email was generated from an applicant that has completed the "
+        . "database skill assessment.<br><br>The email address for this individual is '$email'<br><br>"
+        . "Sincerely yours, <br><br><i>The Database Recruitment Team<br></i></p></span>";
+
 
 //$mail->addAttachment("file.txt", "File.txt");        
 
 
-$mail->AddStringAttachment($attachdata, 'Filename.pdf');
+$mail->AddStringAttachment($attachdata, 'Recruit.pdf');
 
 if(!$mail->send()) 
 {

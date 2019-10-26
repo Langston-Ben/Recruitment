@@ -105,7 +105,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
 
 
                     <div class="textarea-container"><br><br>Additional Comments:<br />
-                        <textarea class="autofit" id="comments"></textarea><div class="textarea-size"></div></div><br><br><br> 
+                        <textarea class="autofit" name="comments" id="comments"></textarea><div class="textarea-size"></div></div><br><br><br> 
                      <input class="submit" type="submit" value="Submit">
                         <input type="hidden" name="action" value="createform">
 

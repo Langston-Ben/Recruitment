@@ -31,6 +31,8 @@ switch ($action) {
         $question8 = filter_input(INPUT_POST, 'question8', FILTER_SANITIZE_STRING);
         $question9 = filter_input(INPUT_POST, 'question9', FILTER_SANITIZE_STRING);
         $question10 = filter_input(INPUT_POST, 'question10', FILTER_SANITIZE_STRING);
+        $comments = filter_input(INPUT_POST, 'comments', FILTER_SANITIZE_STRING);
+        
 
 
 
@@ -39,7 +41,7 @@ switch ($action) {
 
         if (empty($email) || empty($question1) || empty($question1) || empty($question1) ||
                 empty($question1) || empty($question1) || empty($question1) || empty($question1) ||
-                empty($question1) || empty($question1) || empty($question1)) {
+                empty($question1) || empty($question1) || empty($question1) || empty($comments)) {
             $message = '<p class="errormess">Please provide a valid email address and '
                     . 'provide answers to all questions.<p>';
             include '../submitform.php';
@@ -57,16 +59,18 @@ switch ($action) {
         $question8length = strlen($question8);
         $question9length = strlen($question9);
         $question10length = strlen($question10);
+        $commentslength = strlen($comments);
         
 
 
-        if ($question1length > 301 || ($question2.length >301) || ($question2.length >301)
-                || ($question2.length >301)|| ($question2.length >301)|| (question2.length >301)
-                || ($question2.length >301)|| ($question2.length >301)|| ($question2.length >301) 
-                        || ($question2.length >301)|| $question2.length >301){
-            $message = "<br><p>Your Query Exceeds the limit of 200 characters,<br>Please Try Again.<br><br>"
+        if ($question1length > 501 || ($question2length >501) || ($question3length >501)
+                || ($question4length >501)|| ($question5length >501)|| ($question6length >501)
+                || ($question7length >501)|| ($question8length >501)|| ($question9length >501) 
+                        || ($question10length >501)|| $commentslength >501) {
+            $message = "<br><p>Your Query Exceeds the limit of 500 characters,<br>Please Try Again.<br><br>"
                     . "</p>";
             include '../submitform.php';
+//            header("location:/Recruitment/submitform.php");
             exit;
         }
 

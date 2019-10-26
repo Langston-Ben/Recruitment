@@ -81,6 +81,10 @@ $pdf->MultiCell(190 , 5,$question10,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
 
+$pdf->Cell(190 , 5,"Additional Comments from $email:",1,1,'L',true);
+$pdf->MultiCell(190 , 5,$comments,1,1);
+$pdf->Cell(190 , 5,'',0,1);
+
 
 
 
@@ -120,9 +124,9 @@ $mail->addAddress("benlangston2009@gmail.com", "Recruitment Officer");
 
 $mail->isHTML(true);
 
-$mail->Subject = "Recruitment assessment from '$email'";
+$mail->Subject = "Recruitment assessment from $email";
 $mail->Body = "<span style='font-family:Verdana, Arial, Helvetica, sans-serif; font-size:14px'><p>This email was generated from an applicant that has completed the "
-        . "database skill assessment.<br><br>The email address for this individual is '$email'<br><br>"
+        . "database skill assessment.<br><br>The email address for this individual is $email.<br><br>"
         . "Sincerely yours, <br><br><i>The Database Recruitment Team<br></i></p></span>";
 
 

@@ -121,6 +121,7 @@ $mail->From = "recruitment@benjaminlangston.com";
 $mail->FromName = "Ben Langston";
 
 $mail->addAddress("benlangston2009@gmail.com", "Recruitment Officer");
+//$mail->addCC('recruitment101t@gmail.com',"Testing Functionality");
 
 $mail->isHTML(true);
 
@@ -142,8 +143,8 @@ if(!$mail->send())
 else 
 {       //need include statement
     
- $message = "<p>Thank you, $email, the message has been sent successfully.</p>";
-            include '../results.php';
+ $message = "<p>Thank you, $email, the assessment has been sent successfully.</p>";
+            include '../confirmation.php';
             exit;   
     
 //    echo "Message has been sent successfully";

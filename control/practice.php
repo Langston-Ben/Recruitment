@@ -38,8 +38,8 @@ if (empty($query)) {
 $querylength= strlen($query);
 
 
-if ($querylength > 201){
-$message = "<br><redtext> Your Query Exceeds the limit of 200 characters,<br>Please Try Again.<br><br>"
+if ($querylength > 501){
+$message = "<br><redtext> Your Query Exceeds the limit of 500 characters,<br>Please Try Again.<br><br>"
         . "</redtext>";
     include '../results.php';
     exit;
@@ -77,7 +77,7 @@ if(count($result) > 0) {
     }
     $querylist .= '</table>';
 }
-    
+    $message = "<p><Your results are listed below</p>";
 include '../results.php';
 //header("location:/Recruitment/results.php");
 exit;

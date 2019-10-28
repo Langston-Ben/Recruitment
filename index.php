@@ -23,6 +23,9 @@ and open the template in the editor.
         </nav>
     
         <h1>Welcome to the Recruitment Page</h1> 
+        <p>Please proceed to the Submission Form to complete the database skills assessment.<br>
+           Your results will be reviewed by a recruiter as soon as possible.<br>
+           Please utilize the practice page to test your queries to build better results.</p>
         <p>Please click the link to proceed to the data practice and form submission</p>
         
         <a href="/Recruitment/submitform.php">Data Form</a><br><br>

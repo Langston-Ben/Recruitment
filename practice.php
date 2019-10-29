@@ -56,6 +56,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
 
         <h1>Welcome to the Query Practice Page</h1>
         
+        
+        
          <div class="database">
         
             <img src="/Recruitment/images/database.jpg" alt="database" >

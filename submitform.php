@@ -4,7 +4,8 @@
 <html>
     <head>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
+        <script src="script/jquery-3.4.1.js"></script>
         <?php
         $ptitle = "Form Submission";
         include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/head.php';
@@ -33,11 +34,11 @@
             document.addEventListener('input', function (event) {
                 if (event.target.tagName.toLowerCase() !== 'textarea')
                     return;
-                autoExpand(event.target);
+                    autoExpand(event.target);
             }, false);
 
 
-            if (localStorage) {
+            if (sessionStorage) {
                 $(function () {
 
                     $("#saveForm")
@@ -47,65 +48,49 @@
                     document.getElementById("submission").onchange =
                             (function (e) {
                                 e.preventDefault();
-
-                                localStorage.setItem("flag", "set");
-
-
-
-                                var data = $("#submission").serializeArray();
-
-
-
+                                sessionStorage.setItem("flag", "set");
+                                
+                    var data = $("#submission").serializeArray();
                                 $.each(data, function (i, obj) {
-
-                                    localStorage.setItem(obj.name, obj.value);
+                                sessionStorage.setItem(obj.name, obj.value);
                                 });
-
-
                             });
 
-
-                    if (localStorage.getItem("flag") === "set") {
+                    if (sessionStorage.getItem("flag") === "set") {
 
 //                $("header").before("<p>This for has saved data!</p>");
 
                         var data = $("#submission").serializeArray();
-
                         $.each(data, function (i, obj) {
-                            $("[name='" + obj.name + "']").val(localStorage.getItem(obj.name));
-
+                        $("[name='" + obj.name + "']").val(sessionStorage.getItem(obj.name));
                         });
-
                     }
 
                     $("#clearData")
                             .click(function (e) {
-                                e.preventDefault();
-                                localStorage.setItem("flag", "");
+                            e.preventDefault();
+                            sessionStorage.setItem("flag", "");
+                            location.reload();
                             })
                 });
-            }
+        }
         </script>
     </head>
 
     <body>
 
         <header>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/header.php'; ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/header.php'; ?>
         </header>
 
         <nav>
             <?php $page = 'home';
             include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php';
             ?>
-
         </nav>
 
 
-<?php if (isset($message)) {
-    echo $message;
-} ?>
-
+<?php if (isset($message)) {echo $message;} ?>
 
         <main>
             <h1 class="entryform">Candidate Submission</h1>
@@ -150,18 +135,14 @@
                     <p><br><br>Question 10<br>Please Enter Your Solution For Question 10<br>
                         <textarea class="autofit" name="question10" required></textarea></p><br><br><br>
 
-
-
-
                 </fieldset>
 
                 <fieldset>
 
-
                     <p><br><br>Additional Comments:<br />
                         <textarea class="autofit" name="comments" id="comments"></textarea></p><br><br><br>
                     <input class="submit" type="submit" value="Submit">
-                    <input type="hidden" name="action" value="createform">
+                    <input type="hidden" name="action" value="createform">                    
 
                     <button type="submit" value="Clear Data" id="clearData">Clear Form</button>
 
@@ -169,11 +150,10 @@
             </form>
         </main>
         <footer><br><br>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/footer.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/footer.php'; ?>
             <p>Last updated:
-<?php echo date("j F, Y", getlastmod()) ?>
+        <?php echo date("j F, Y", getlastmod()) ?>
             </p>
         </footer>
-
     </body>
 </html>

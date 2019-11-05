@@ -5,7 +5,7 @@
     <head>
 
         <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
-        <script src="script/jquery-3.4.1.js"></script>
+        <script src="/Recruitment/script/jquery-3.4.1.js"></script>
         <?php
         $ptitle = "Form Submission";
         include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/head.php';
@@ -44,6 +44,7 @@
                     $("#saveForm")
                             .after("<input type='submit' value='Save Input' id='saveInput'>");
 
+                    // by using onchange, the form will be saved everytime something changes on the input.
                     $("#saveInput")
                     document.getElementById("submission").onchange =
                             (function (e) {
@@ -105,8 +106,7 @@
                     </label>
 
                     <p><br><br>Question 1<br>Please Enter Your Solution For Question 1<br>
-                        <textarea class="autofit" name="question1" id="f_textarea" required>
-                        </textarea></p>
+                        <textarea class="autofit" name="question1" id="f_textarea" required></textarea></p>
 
                     <p><br><br>Question 2<br>Please Enter Your Solution For Question 2<br>
                         <textarea class="autofit" name="question2" required></textarea></p><br>

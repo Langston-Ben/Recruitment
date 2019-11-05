@@ -121,7 +121,7 @@ $mail->From = "recruitment@benjaminlangston.com";
 $mail->FromName = "Ben Langston";
 
 $mail->addAddress("benlangston2009@gmail.com", "Recruitment Officer");
-$mail->addAddress("carverj@churchofjesuschrist.org", "Recruitment Officer");
+//$mail->addAddress("carverj@churchofjesuschrist.org", "Recruitment Officer");
 //$mail->addCC('recruitment101t@gmail.com',"Testing Functionality");
 
 $mail->isHTML(true);

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <?php $ptitle = "Database Practice";
         include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/head.php';
         ?>
-        <script>
+        <script src="/Recruitment/script/jquery-3.4.1.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type = "text/javascript">
             function goBack() {
                 window.history.back();
             }
@@ -38,9 +35,34 @@ document.addEventListener('input', function (event) {
 	autoExpand(event.target);
 }, false);
 
+
+
+$(document).ready(function(){
+if(localStorage.getItem("imageHidden") === "true" ){
+    $("#img").hide();
+  
+} else if (localStorage.getItem("imageHidden") === "false" ) {
+    $("#img").show();
+//  localStorage.setItem("flag", "");
+};
+
+$("#btn").on("click", function(){ 
+    $("#img").hide();
+    localStorage.setItem("imageHidden", "true");
+});
+
+$("#showBtn").on("click", function(){
+    $("#img").show(); 
+    localStorage.setItem("imageHidden", "false");
+});
+
+  });
+
+
         </script>
     </head>
     <body>
+    <!--<body onload="onLoad()">-->
         <header>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/header.php'; ?>
         </header>
@@ -58,12 +80,17 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
         
          <div class="database">
         
-            <img src="/Recruitment/images/database.jpg" alt="database" >
+            <img src="/Recruitment/images/database.jpg" alt="database" id="img" >
         </div>
+        <!--<button onclick="onClose()">Toggle between hide() and show()</button>-->
+        <button Id="btn">Hide</button>
+        <button id="showBtn">Show</button>
         
         <p>Please read the instructions and practice your queries</p>
+        <p>The practice database is built on the MySQL platform.</p>
         
         <p>The database contains the following tables:</p>
+        
         
         <ul>
             <li>Customers</li>
@@ -72,13 +99,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
         </ul>
         
        
-
-  <!--      <figure>
-        <img src="/Recruitment/images/databasetemplate.jpg" alt="Database Template" width="300">
-        </figure> -->
-  
-        
-
 
         <button onclick="goBack()" id="button">Reload Previous Query</button><br><br>
         
@@ -118,11 +138,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
                       </p>
                   </footer>  -->
         
-<!--        <script src="/Recruitment/script/scripts.js"></script>-->
-<!--        <script type="text/javascript" src="/Recruitment/script/jquery-3.4.1.min.js"></script>
-        <script src="script/jquery-3.4.1.min.js"></script>-->
-<!--        <script src="/Recruitment/script/textareasizing"></script> -->
-       
 
     </body>
     

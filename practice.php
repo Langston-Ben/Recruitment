@@ -57,6 +57,22 @@ $("#showBtn").on("click", function(){
 });
 
   });
+  
+  $(document).ready(function () {
+                $('textarea').on("load propertychange keyup input paste",
+                        function () {
+                            var text_max = 500;
+                            var cc = $(this).val().length;
+                            var id = $(this, 'textarea').attr('id');
+                            //  var text_length = $('textarea').val().length;
+                            var tr = text_max - cc;
+                            $('#' + id).next('p').text('Characters Remaining: ' + tr);
+                            console.log(tr);
+                        });
+
+                $('textarea').trigger('load');
+
+            });
 
 
         </script>
@@ -98,6 +114,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
             <li>Vehicle</li>
         </ul>
         
+        <p>*Please note, queries are limited to 500 characters.*</p>
+        
        
 
         <button onclick="goBack()" id="button">Reload Previous Query</button><br><br>
@@ -109,12 +127,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
         <!--    <div class="practice"><input name="query" type="text" size="100"/><br><br></div> -->
             
             <div class="textarea-container">
-  
- 
+
+            <textarea class="autofit" name="query" id="queryInput" maxlength="500"></textarea><p></p> 
             
-            
-            <textarea class="autofit" name="query"></textarea> <div class="textarea-size"></div>
-</div>
+            <div class="textarea-size"></div>
+            </div>
             <div class="submit"><input id="submit" type="submit" name="submit" value="Submit" /></div> 
             <input type="hidden" name="action" value="query">
 
@@ -126,11 +143,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
             echo $querylist;
         } ?><br>
         
-       
-        
-        
-        
-        
+
         <!--     <footer><br><br>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/recruitment/common/footer.php'; ?>
                       <p>Last updated:

@@ -122,6 +122,7 @@
                   autocomplete="on">
                 <fieldset>
                     <legend>Please answer and submit the following:</legend><br>
+                    <h4>*Please note, input boxes are limited to 500 characters.*</h4>
                     <label>Please Enter Your Email Address For Tracking:<br> 
                         <input type="email" name="email" placeholder="joseph@smith.com"  
                                size="40" maxlength="80">
@@ -173,7 +174,7 @@
 
                 <fieldset>
 
-                    <br><br>Additional Comments:<br />
+                    <br><br>Additional Comments: (optional)<br />
                     <textarea class="autofit" name="comments" id="comments" maxlength="500"></textarea><p></p>
                     <input class="submit" type="submit" value="Submit">
                     <input type="hidden" name="action" value="createform">                    

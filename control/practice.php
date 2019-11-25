@@ -56,6 +56,7 @@ $message = "<br><redtext> Your Query Exceeds the limit of 500 characters,<br>Ple
 try{
 $result = getTest($query);
 
+
 if(count($result) > 0) {
     $querylist = '<table border=1';
     $querylist .= '<tr>';

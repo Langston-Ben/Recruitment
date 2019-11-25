@@ -60,25 +60,25 @@ $pdf->Cell(190 , 5,'Question 5 - Results for this question',1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question5,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-//$pdf->Cell(190 , 5,'Question 6 - Show results for this question',1,1,'L',true);
-//$pdf->MultiCell(190 , 5,$question6,1,1);
-//$pdf->Cell(190 , 5,'',0,1);
-//
-//$pdf->Cell(190 , 5,'Question 7 - Show results for this question',1,1,'L',true);
-//$pdf->MultiCell(190 , 5,$question7,1,1);
-//$pdf->Cell(190 , 5,'',0,1);
-//
-//$pdf->Cell(190 , 5,'Question 8 - Show results for this question',1,1,'L',true);
-//$pdf->MultiCell(190 , 5,$question8,1,1);
-//$pdf->Cell(190 , 5,'',0,1);
-//
-//$pdf->Cell(190 , 5,'Question 9 - Show results for this question',1,1,'L',true);
-//$pdf->MultiCell(190 , 5,$question9,1,1);
-//$pdf->Cell(190 , 5,'',0,1);
-//
-//$pdf->Cell(190 , 5,'Question 10 - Show results for this question',1,1,'L',true);
-//$pdf->MultiCell(190 , 5,$question10,1,1);
-//$pdf->Cell(190 , 5,'',0,1);
+$pdf->Cell(190 , 5,'Question 6 - Show results for this question',1,1,'L',true);
+$pdf->MultiCell(190 , 5,$question6,1,1);
+$pdf->Cell(190 , 5,'',0,1);
+
+$pdf->Cell(190 , 5,'Question 7 - Show results for this question',1,1,'L',true);
+$pdf->MultiCell(190 , 5,$question7,1,1);
+$pdf->Cell(190 , 5,'',0,1);
+
+$pdf->Cell(190 , 5,'Question 8 - Show results for this question',1,1,'L',true);
+$pdf->MultiCell(190 , 5,$question8,1,1);
+$pdf->Cell(190 , 5,'',0,1);
+
+$pdf->Cell(190 , 5,'Question 9 - Show results for this question',1,1,'L',true);
+$pdf->MultiCell(190 , 5,$question9,1,1);
+$pdf->Cell(190 , 5,'',0,1);
+
+$pdf->Cell(190 , 5,'Question 10 - Show results for this question',1,1,'L',true);
+$pdf->MultiCell(190 , 5,$question10,1,1);
+$pdf->Cell(190 , 5,'',0,1);
 
 
 $pdf->Cell(190 , 5,"Additional Comments from $email:",1,1,'L',true);
@@ -121,6 +121,7 @@ $mail->From = "recruitment@benjaminlangston.com";
 $mail->FromName = "Ben Langston";
 
 $mail->addAddress("benlangston2009@gmail.com", "Recruitment Officer");
+//$mail->addAddress("blang77@aol.com");
 //$mail->addAddress("carverj@churchofjesuschrist.org", "Recruitment Officer");
 //$mail->addCC('recruitment101t@gmail.com',"Testing Functionality");
 

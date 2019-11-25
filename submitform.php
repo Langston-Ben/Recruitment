@@ -117,7 +117,9 @@
             <h1 class="entryform">Candidate Submission</h1>
             <p>Click Here To Practice Your Queries</p>
             <a href="/Recruitment/control/practice.php?action=newquery">Practice Page</a><br><br>
-
+            
+            <!--Change this code to index.php-->
+            
             <form action="/Recruitment/control/pdfcontrol.php" method="post" id="submission" 
                   autocomplete="on">
                 

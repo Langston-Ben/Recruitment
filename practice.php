@@ -96,8 +96,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
         
          <div class="database">
         
-            <img src="/Recruitment/images/database.jpg" alt="database" id="img" >
-        </div>
+            <img src="/Recruitment/images/db.jpg" alt="database" id="img" >
+         </div><br>
         <!--<button onclick="onClose()">Toggle between hide() and show()</button>-->
         <button Id="btn">Hide</button>
         <button id="showBtn">Show</button>
@@ -109,9 +109,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
         
         
         <ul>
-            <li>Customers</li>
-            <li>Address</li>
-            <li>Vehicle</li>
+            <li>Table1</li>
+            <li>Table2</li>         
         </ul>
         
         <p>*Please note, queries are limited to 500 characters.*</p>

@@ -120,37 +120,50 @@
 
             <form action="/Recruitment/control/pdfcontrol.php" method="post" id="submission" 
                   autocomplete="on">
+                
+                <div class="database2">
+        
+                    <img src="/Recruitment/images/db.jpg" alt="database" id="img">
+                </div><br>
                 <fieldset>
                     <legend>Please answer and submit the following:</legend><br>
+                    <p>Using the two tables above, write 5 different sql statements 
+                        to return the results below.<br> NOTE: You can NOT hard code ANY 
+                        filter VALUES. IE the where clause cannot be filtered by A,B,C or 1,2,3.</p>
                     <h4>*Please note, input boxes are limited to 500 characters.*</h4>
                     <label>Please Enter Your Email Address For Tracking:<br> 
                         <input type="email" name="email" placeholder="joseph@smith.com"  
                                size="40" maxlength="80">
                     </label>
 
-                    <br><br>Question 1<br>Please Enter Your Solution For Question 1<br>
+                    <br><br>Question 1<br>Make a query that returns this result:<br>
+                    <div class="q1"><img src="/Recruitment/images/q1.jpg" alt="q1" id="q1"></div><br>
                     <textarea class="autofit" name="question1" id="area1" 
                               maxlength="500" required></textarea><p></p>
 
-                    <br><br>Question 2<br>Please Enter Your Solution For Question 2<br>
+                    <br><br>Question 2<br>Make a query that returns this result:<br>
+                    <div class="q2"><img src="/Recruitment/images/q2.jpg" alt="q2" id="q2"></div><br>
                     <textarea class="autofit" name="question2" id="area2" 
                               maxlength="500" required></textarea><p></p>
 
 
-                    <br><br>Question 3<br>Please Enter Your Solution For Question 3<br>
+                    <br><br>Question 3<br>Make a query that returns this result:<br>
+                    <div class="q3"><img src="/Recruitment/images/q3.jpg" alt="q3" id="q3"></div><br>
                     <textarea class="autofit" name="question3" id="area3" 
                               maxlength="500" required></textarea><p></p>
 
 
-                    <br><br>Question 4<br>Please Enter Your Solution For Question 4<br>
+                    <br><br>Question 4<br>Make a query that returns this result:<br>
+                    <div class="q4"><img src="/Recruitment/images/q4.jpg" alt="q4" id="q4"></div><br>
                     <textarea class="autofit" name="question4" id="area4" 
                               maxlength="500" required></textarea><p></p>
 
-                    <br><br>Question 5<br>Please Enter Your Solution For Question 5<br>
+                    <br><br>Question 5<br>Make a query that returns this result:<br>
+                    <div class="q5"><img src="/Recruitment/images/q5.jpg" alt="q5" id="q5"></div><br>
                     <textarea class="autofit" name="question5"  id="area5" 
                               maxlength="500" required></textarea><p></p>
 
-                    <br><br>Question 6<br>Please Enter Your Solution For Question 6<br>
+       <!--             <br><br>Question 6<br>Please Enter Your Solution For Question 6<br>
                     <textarea class="autofit" name="question6" id="area6" 
                               maxlength="500" required></textarea><p></p>
 
@@ -168,7 +181,7 @@
 
                     <br><br>Question 10<br>Please Enter Your Solution For Question 10<br>
                     <textarea class="autofit" name="question10" id="area10" 
-                              maxlength="500" required></textarea><p></p>
+                              maxlength="500" required></textarea><p></p>  -->
 
                 </fieldset>
 

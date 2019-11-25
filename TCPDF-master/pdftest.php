@@ -40,45 +40,45 @@ $pdf->SetFont('times','', 14);
 $pdf->SetFillColor(169, 169, 169);
 $pad = 1;
 $pdf->SetCellPadding($pad);
-$pdf->Cell(190 , 5,'Question 1 - Show results for this question',1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 1 - Results for this question',1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question1,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 2 - Show results for this question',1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 2 - Results for this question',1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question2,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 3 - Show results for this question',1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 3 - Results for this question',1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question3,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 4 - Show results for this question',1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 4 - Results for this question',1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question4,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 5 - Show results for this question',1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 5 - Results for this question',1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question5,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 6 - Show results for this question',1,1,'L',true);
-$pdf->MultiCell(190 , 5,$question6,1,1);
-$pdf->Cell(190 , 5,'',0,1);
-
-$pdf->Cell(190 , 5,'Question 7 - Show results for this question',1,1,'L',true);
-$pdf->MultiCell(190 , 5,$question7,1,1);
-$pdf->Cell(190 , 5,'',0,1);
-
-$pdf->Cell(190 , 5,'Question 8 - Show results for this question',1,1,'L',true);
-$pdf->MultiCell(190 , 5,$question8,1,1);
-$pdf->Cell(190 , 5,'',0,1);
-
-$pdf->Cell(190 , 5,'Question 9 - Show results for this question',1,1,'L',true);
-$pdf->MultiCell(190 , 5,$question9,1,1);
-$pdf->Cell(190 , 5,'',0,1);
-
-$pdf->Cell(190 , 5,'Question 10 - Show results for this question',1,1,'L',true);
-$pdf->MultiCell(190 , 5,$question10,1,1);
-$pdf->Cell(190 , 5,'',0,1);
+//$pdf->Cell(190 , 5,'Question 6 - Show results for this question',1,1,'L',true);
+//$pdf->MultiCell(190 , 5,$question6,1,1);
+//$pdf->Cell(190 , 5,'',0,1);
+//
+//$pdf->Cell(190 , 5,'Question 7 - Show results for this question',1,1,'L',true);
+//$pdf->MultiCell(190 , 5,$question7,1,1);
+//$pdf->Cell(190 , 5,'',0,1);
+//
+//$pdf->Cell(190 , 5,'Question 8 - Show results for this question',1,1,'L',true);
+//$pdf->MultiCell(190 , 5,$question8,1,1);
+//$pdf->Cell(190 , 5,'',0,1);
+//
+//$pdf->Cell(190 , 5,'Question 9 - Show results for this question',1,1,'L',true);
+//$pdf->MultiCell(190 , 5,$question9,1,1);
+//$pdf->Cell(190 , 5,'',0,1);
+//
+//$pdf->Cell(190 , 5,'Question 10 - Show results for this question',1,1,'L',true);
+//$pdf->MultiCell(190 , 5,$question10,1,1);
+//$pdf->Cell(190 , 5,'',0,1);
 
 
 $pdf->Cell(190 , 5,"Additional Comments from $email:",1,1,'L',true);

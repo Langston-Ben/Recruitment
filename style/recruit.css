@@ -217,8 +217,8 @@ textarea {
      display: block;
      border: 2px solid black;
      margin-right: auto;
-     margin-left: auto;
-     width: 80%;  
+     /*margin-left: auto;*/
+     width: 60%;  
 }
  a {
        
@@ -246,3 +246,63 @@ textarea {
     padding: 5px;
 }    
     
+.database2 {
+    
+    margin-left: auto;
+    margin-right:auto;
+    
+}
+
+.database2 img {
+    
+     display: block;
+     border: 2px solid black;
+     margin-right: auto;
+     /*margin-left: auto;*/
+     width: 50%;  
+}
+
+.q1 img {
+    
+     display: block;
+     border: 1px solid black;
+     margin-right: auto;
+     /*margin-left: auto;*/
+     width: 15%;  
+}
+
+.q2 img {
+    
+     display: block;
+     border: 1px solid black;
+     margin-right: auto;
+     /*margin-left: auto;*/
+     width: 25%;  
+}
+
+.q3 img {
+    
+     display: block;
+     border: 1px solid black;
+     margin-right: auto;
+     /*margin-left: auto;*/
+     width: 25%;  
+}
+
+.q4 img {
+    
+     display: block;
+     border: 1px solid black;
+     margin-right: auto;
+     /*margin-left: auto;*/
+     width: 12%;  
+}
+
+.q5 img {
+    
+     display: block;
+     border: 1px solid black;
+     margin-right: auto;
+     /*margin-left: auto;*/
+     width: 12%;  
+}

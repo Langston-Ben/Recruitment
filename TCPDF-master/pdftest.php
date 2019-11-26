@@ -10,15 +10,15 @@ $pdf->SetFont('times', 'B', 14);
 $pdf->Image('../images/ldslogo.gif',80,10,50,18);
 
 $pdf->Cell(34, 25, '', 0, 1);
-$pdf->Cell(120, 5, 'The Church of Jesus Christ of Latter-day Saints', 0, 0);
+$pdf->Cell(110, 5, 'The Church of Jesus Christ of Latter-day Saints', 0, 0);
 $pdf->Cell(50, 5, 'Database Recruitment', 5, 1);
 
 $pdf->SetFont('times','', 14);
 
-$pdf->Cell(120, 5, '120 N 200 W', 0, 0);
-$pdf->Cell(50, 5, "Email: $email", 0, 1);
+$pdf->Cell(110, 5, '120 N 200 W', 0, 0);
+$pdf->MultiCell(100, 5, "Email: $email", 0, 1);
 
-$pdf->Cell(120, 5, 'Salt Lake City, UT 84103', 0, 0);
+$pdf->Cell(110, 5, 'Salt Lake City, UT 84103', 0, 0);
 $date = date("m/j/Y");
 $pdf->Cell(50, 5, "Date:  $date", 0, 1);
 
@@ -87,11 +87,8 @@ $pdf->Cell(190 , 5,"Additional Comments from $email:",1,1,'L',true);
 $pdf->MultiCell(190 , 5,$comments,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-//$pdf->Output();
-
-
 ob_clean();
-//$pdf->Output();
+$pdf->Output();
 $attachdata = $pdf->Output('foo.pdf','S'); //  return the document as a string (name is ignored)
 $pdf->Close();
 

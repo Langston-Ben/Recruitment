@@ -116,11 +116,11 @@
         <main>
             <h1 class="entryform">Candidate Submission</h1>
             <p>Click Here To Practice Your Queries</p>
-            <a href="/Recruitment/control/practice.php?action=newquery">Practice Page</a><br><br>
+            <a href="/Recruitment/practice/index.php?action=newquery">Practice Page</a><br><br>
             
             <!--Change this code to index.php-->
             
-            <form action="/Recruitment/control/pdfcontrol.php" method="post" id="submission" 
+            <form action="/Recruitment/submission/index.php" method="post" id="submission" 
                   autocomplete="on">
                 
                 <div class="database2">

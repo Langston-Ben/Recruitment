@@ -121,7 +121,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
         
          
 
-        <form action="/Recruitment/control/practice.php" method="post"> 
+        <form action="/Recruitment/practice/index.php" method="post"> 
 
         <!--    <div class="practice"><input name="query" type="text" size="100"/><br><br></div> -->
             

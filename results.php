@@ -14,7 +14,7 @@ and open the template in the editor.
         
         function moveWindow() 
         {
-            window.location.hash="jump";
+            window.location.hash="result";
         }
         
         
@@ -33,7 +33,7 @@ and open the template in the editor.
         <h1>Results:</h1> 
         <div class="overflow"><?php if (isset($query)) {echo $query;} ?></div>
         
-        <div class="jump"><a name="jump"></a></div>
+        <div class="result"><a name="result"></a></div>
         
          <?php if (isset($message)) {echo $message; 
          echo "<div class='finish'<p><a href='/Recruitment/index.php' title='Home'>Home</a></p></div>";} ?>

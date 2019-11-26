@@ -25,6 +25,8 @@ $pdf->Cell(50, 5, "Date:  $date", 0, 1);
 $pdf->Cell(34, 5, '', 0, 1);
 $pdf->SetFont('times', 'B', 14);
 $pdf->Cell(0,5,"Recruitment Test Results",0,1,'C');
+$percent = '%';
+$pdf->Cell(0,5,$score.'%',0,0,'C');
 
 
 //$pdf->Cell(34, 5, '[dd/mm/yyyy]', 0, 1);
@@ -40,52 +42,52 @@ $pdf->SetFont('times','', 14);
 $pdf->SetFillColor(169, 169, 169);
 $pad = 1;
 $pdf->SetCellPadding($pad);
-$pdf->Cell(190 , 5,'Question 1 - Results for this question',1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 1 - Results for this question:  '.$q1Message,1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question1,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 2 - Results for this question',1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 2 - Results for this question:  '.$q2Message,1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question2,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 3 - Results for this question',1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 3 - Results for this question:  '.$q3Message,1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question3,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 4 - Results for this question',1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 4 - Results for this question:  '.$q4Message,1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question4,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 5 - Results for this question',1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 5 - Results for this question:  '.$q5Message,1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question5,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 6 - Show results for this question',1,1,'L',true);
-$pdf->MultiCell(190 , 5,$question6,1,1);
-$pdf->Cell(190 , 5,'',0,1);
-
-$pdf->Cell(190 , 5,'Question 7 - Show results for this question',1,1,'L',true);
-$pdf->MultiCell(190 , 5,$question7,1,1);
-$pdf->Cell(190 , 5,'',0,1);
-
-$pdf->Cell(190 , 5,'Question 8 - Show results for this question',1,1,'L',true);
-$pdf->MultiCell(190 , 5,$question8,1,1);
-$pdf->Cell(190 , 5,'',0,1);
-
-$pdf->Cell(190 , 5,'Question 9 - Show results for this question',1,1,'L',true);
-$pdf->MultiCell(190 , 5,$question9,1,1);
-$pdf->Cell(190 , 5,'',0,1);
-
-$pdf->Cell(190 , 5,'Question 10 - Show results for this question',1,1,'L',true);
-$pdf->MultiCell(190 , 5,$question10,1,1);
-$pdf->Cell(190 , 5,'',0,1);
+//$pdf->Cell(190 , 5,'Question 6 - Show results for this question',1,1,'L',true);
+//$pdf->MultiCell(190 , 5,$question6,1,1);
+//$pdf->Cell(190 , 5,'',0,1);
+//
+//$pdf->Cell(190 , 5,'Question 7 - Show results for this question',1,1,'L',true);
+//$pdf->MultiCell(190 , 5,$question7,1,1);
+//$pdf->Cell(190 , 5,'',0,1);
+//
+//$pdf->Cell(190 , 5,'Question 8 - Show results for this question',1,1,'L',true);
+//$pdf->MultiCell(190 , 5,$question8,1,1);
+//$pdf->Cell(190 , 5,'',0,1);
+//
+//$pdf->Cell(190 , 5,'Question 9 - Show results for this question',1,1,'L',true);
+//$pdf->MultiCell(190 , 5,$question9,1,1);
+//$pdf->Cell(190 , 5,'',0,1);
+//
+//$pdf->Cell(190 , 5,'Question 10 - Show results for this question',1,1,'L',true);
+//$pdf->MultiCell(190 , 5,$question10,1,1);
+//$pdf->Cell(190 , 5,'',0,1);
 
 
 $pdf->Cell(190 , 5,"Additional Comments from $email:",1,1,'L',true);
 $pdf->MultiCell(190 , 5,$comments,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-
+//$pdf->Output();
 
 
 ob_clean();
@@ -121,13 +123,12 @@ $mail->From = "recruitment@benjaminlangston.com";
 $mail->FromName = "Ben Langston";
 
 $mail->addAddress("benlangston2009@gmail.com", "Recruitment Officer");
-//$mail->addAddress("blang77@aol.com");
 //$mail->addAddress("carverj@churchofjesuschrist.org", "Recruitment Officer");
 //$mail->addCC('recruitment101t@gmail.com',"Testing Functionality");
 
 $mail->isHTML(true);
 
-$mail->Subject = "Recruitment assessment from $email";
+$mail->Subject = "Recruitment assessment from $email, Score = $score";
 $mail->Body = "<span style='font-family:Verdana, Arial, Helvetica, sans-serif; font-size:14px'><p>This email was generated from an applicant that has completed the "
         . "database skill assessment.<br><br>The email address for this individual is $email.<br><br>"
         . "Sincerely yours, <br><br><i>The Database Recruitment Team<br></i></p></span>";

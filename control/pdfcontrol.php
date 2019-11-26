@@ -117,8 +117,7 @@ switch ($action) {
             }
         } catch (Exception $e) {
 
-            $q1Points = 0;
-            $q1Message = "Incorrect";
+           
         }
 
 
@@ -141,8 +140,7 @@ switch ($action) {
             }
         } catch (Exception $e) {
 
-            $q2Points = 0;
-            $q2Message = "Incorrect";
+           
         }
 
 
@@ -165,8 +163,8 @@ switch ($action) {
             }
         } catch (Exception $e) {
 
-            $q3Points = 0;
-            $q3Message = "Incorrect";
+           
+           
         }
 
 
@@ -189,8 +187,7 @@ switch ($action) {
             }
         } catch (Exception $e) {
 
-            $q4Points = 0;
-            $q4Message = "Incorrect";
+           
         }
 
 
@@ -212,8 +209,7 @@ switch ($action) {
             }
         } catch (Exception $e) {
 
-            $q5Points = 0;
-            $q5Message = "Incorrect";
+         
         }
         
         
@@ -234,9 +230,44 @@ switch ($action) {
         }
         
         $totalPoints = ($q1Points + $q2Points + $q3Points + $q4Points + $q5Points) / 5;
-
+        
+        if($q1Points == 1) { 
+            $q1Message = "Correct";          
+        }
+        else {
+            $q1Message = "Incorrect";          
+        }
+        
+        if($q2Points == 1) { 
+            $q2Message = "Correct";          
+        }
+        else {
+            $q2Message = "Incorrect";          
+        }
+        
+        if($q3Points == 1) { 
+            $q3Message = "Correct";          
+        }
+        else {
+            $q3Message = "Incorrect";          
+        }
+        
+        if($q4Points == 1) { 
+            $q4Message = "Correct";          
+        }
+        else {
+            $q4Message = "Incorrect";          
+        }
+        
+        if($q5Points == 1) { 
+            $q5Message = "Correct";          
+        }
+        else {
+            $q5Message = "Incorrect";          
+        }
+        
         $score = $totalPoints * 100;
-
+       
         include '../TCPDF-master/pdftest.php';
         break;
 }

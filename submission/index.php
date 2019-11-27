@@ -215,18 +215,23 @@ switch ($action) {
         
         if (strpos($q1lower, $chkwhr) !== false) {
             $q1Points = 0;
+            $f1Message = " - Filtering Used";
         }
         if (strpos($q2lower, $chkwhr) !== false) {
             $q2Points = 0;
+            $f2Message = " - Filtering Used";
         }
         if (strpos($q3lower, $chkwhr) !== false) {
             $q3Points = 0;
+            $f3Message = " - Filtering Used";
         }
         if (strpos($q4lower, $chkwhr) !== false) {
             $q4Points = 0;
+            $f4Message = " - Filtering Used";
         }
         if (strpos($q5lower, $chkwhr) !== false) {
             $q5Points = 0;
+             $f5Message = " - Filtering Used";
         }
         
         $totalPoints = ($q1Points + $q2Points + $q3Points + $q4Points + $q5Points) / 5;

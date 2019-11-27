@@ -42,23 +42,23 @@ $pdf->SetFont('times','', 14);
 $pdf->SetFillColor(169, 169, 169);
 $pad = 1;
 $pdf->SetCellPadding($pad);
-$pdf->Cell(190 , 5,'Question 1 - Results for this question:  '.$q1Message,1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 1 - Results for this question:  '.$q1Message.$f1Message,1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question1,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 2 - Results for this question:  '.$q2Message,1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 2 - Results for this question:  '.$q2Message.$f2Message,1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question2,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 3 - Results for this question:  '.$q3Message,1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 3 - Results for this question:  '.$q3Message.$f3Message,1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question3,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 4 - Results for this question:  '.$q4Message,1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 4 - Results for this question:  '.$q4Message.$f4Message,1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question4,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-$pdf->Cell(190 , 5,'Question 5 - Results for this question:  '.$q5Message,1,1,'L',true);
+$pdf->Cell(190 , 5,'Question 5 - Results for this question:  '.$q5Message.$f5Message,1,1,'L',true);
 $pdf->MultiCell(190 , 5,$question5,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 

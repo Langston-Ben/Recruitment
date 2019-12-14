@@ -9,10 +9,10 @@ require_once '../lib/functions.php';
 
 
 
-$action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
-switch ($action) {
-
-    case 'createform':
+//$action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
+//switch ($action) {
+//
+//    case 'createform':
 
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         
@@ -23,6 +23,8 @@ switch ($action) {
         $question5 = filter_input(INPUT_POST, 'question5');
         
         $comments = filter_input(INPUT_POST, 'comments');
+        
+       
 
 
         //Check for missing data
@@ -249,7 +251,8 @@ switch ($action) {
         }
         
         $score = $totalPoints * 100;
+        
        
         include '../TCPDF-master/pdftest.php';
-        break;
-}
+//        break;
+//}

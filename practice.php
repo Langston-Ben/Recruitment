@@ -62,7 +62,7 @@ $("#showBtn").on("click", function(){
   if (sessionStorage) {
                 $(function () {
 
-                    $("#saveForm")
+                    $("#saveForm2")
                             .after("<input type='submit' value='Save Input' id='saveInput2'>");
 
                     // by using onchange, the form will be saved everytime something changes on the input.

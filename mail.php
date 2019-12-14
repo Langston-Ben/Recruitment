@@ -11,7 +11,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 //Enable SMTP debugging. 
 $mail->SMTPDebug = 3;                               
 //Set PHPMailer to use SMTP.
-$mail->isSMTP();            
+//$mail->isSMTP();            
 //Set SMTP host name                          
 $mail->Host = "mail.benjaminlangston.com";
 //Set this to true if SMTP host requires authentication to send email

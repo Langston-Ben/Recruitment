@@ -8,8 +8,6 @@ function getTest($query){
     
     
     $stmt = $db->prepare($sql);
-  //  $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
-//    $stmt->bindValue($query, PDO::PARAM_STR);
     $stmt->execute();
     $reviewInfo = $stmt->fetchALL(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
@@ -25,8 +23,6 @@ Function getQ1($value){
     
     
     $stmt = $db->prepare($sql);
-  //  $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
-//    $stmt->bindValue($query, PDO::PARAM_STR);
     $stmt->execute();
     $q1Info = $stmt->fetchALL(PDO::FETCH_ASSOC);
     $stmt->closeCursor();

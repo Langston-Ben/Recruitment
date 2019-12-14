@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="en-us">
     <head>
         
         <?php $ptitle = "Results";
@@ -33,15 +33,14 @@ and open the template in the editor.
         <h1>Results:</h1> 
         <div class="overflow"><?php if (isset($query)) {echo $query;} ?></div>
         
+        <p>Your results are listed below:</p>
+        
         <div class="result"><a name="result"></a></div>
         
          <?php if (isset($message)) {echo $message; 
          echo "<div class='finish'<p><a href='/Recruitment/index.php' title='Home'>Home</a></p></div>";} ?>
         <?php if (isset($querylist)) {echo $querylist;} ?><br>
         
-      
-       
-      
         
         <footer><br><br>
                 <?php include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/footer.php'; ?>

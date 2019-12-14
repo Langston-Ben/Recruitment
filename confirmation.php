@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
     <head>
         
         <?php $ptitle = "Confirmation";

@@ -62,33 +62,12 @@ $pdf->Cell(190 , 5,'Question 5 - Results for this question:  '.$q5Message.$f5Mes
 $pdf->MultiCell(190 , 5,$question5,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
-//$pdf->Cell(190 , 5,'Question 6 - Show results for this question',1,1,'L',true);
-//$pdf->MultiCell(190 , 5,$question6,1,1);
-//$pdf->Cell(190 , 5,'',0,1);
-//
-//$pdf->Cell(190 , 5,'Question 7 - Show results for this question',1,1,'L',true);
-//$pdf->MultiCell(190 , 5,$question7,1,1);
-//$pdf->Cell(190 , 5,'',0,1);
-//
-//$pdf->Cell(190 , 5,'Question 8 - Show results for this question',1,1,'L',true);
-//$pdf->MultiCell(190 , 5,$question8,1,1);
-//$pdf->Cell(190 , 5,'',0,1);
-//
-//$pdf->Cell(190 , 5,'Question 9 - Show results for this question',1,1,'L',true);
-//$pdf->MultiCell(190 , 5,$question9,1,1);
-//$pdf->Cell(190 , 5,'',0,1);
-//
-//$pdf->Cell(190 , 5,'Question 10 - Show results for this question',1,1,'L',true);
-//$pdf->MultiCell(190 , 5,$question10,1,1);
-//$pdf->Cell(190 , 5,'',0,1);
-
-
 $pdf->Cell(190 , 5,"Additional Comments from $email:",1,1,'L',true);
 $pdf->MultiCell(190 , 5,$comments,1,1);
 $pdf->Cell(190 , 5,'',0,1);
 
 ob_clean();
-$pdf->Output();
+//$pdf->Output();
 $attachdata = $pdf->Output('foo.pdf','S'); //  return the document as a string (name is ignored)
 $pdf->Close();
 
@@ -101,9 +80,12 @@ require_once "../mailer/PHPMailer-master/src/Exception.php";
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 
 //Enable SMTP debugging. 
-$mail->SMTPDebug = 0;                               
+$mail->SMTPDebug = 0;         
+
 //Set PHPMailer to use SMTP.
-$mail->isSMTP();            
+//Remove the comment on the next line when hosting
+//$mail->isSMTP();            
+
 //Set SMTP host name                          
 $mail->Host = "mail.benjaminlangston.com";
 //Set this to true if SMTP host requires authentication to send email
@@ -143,9 +125,9 @@ if(!$mail->send())
 else 
 {       //need include statement
     
- $message = "<p>Thank you, $email, the assessment has been sent successfully.</p>";
+ $message = "<p>Thank you, $email, the assessment has been sent successfully."
+         . "<br>Your assessment score is: $score%.</p>";
             include '../confirmation.php';
             exit;   
     
-//    echo "Message has been sent successfully";
 }

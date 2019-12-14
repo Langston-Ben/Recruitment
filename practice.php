@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
     <head>
         <?php $ptitle = "Database Practice";
         include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/head.php';
@@ -57,6 +57,50 @@ $("#showBtn").on("click", function(){
 });
 
   });
+  
+  
+  if (sessionStorage) {
+                $(function () {
+
+                    $("#saveForm")
+                            .after("<input type='submit' value='Save Input' id='saveInput2'>");
+
+                    // by using onchange, the form will be saved everytime something changes on the input.
+                    $("#saveInput2")
+                    document.getElementById("practicedb").onchange =
+                            (function (e) {
+                                e.preventDefault();
+                                sessionStorage.setItem("flag", "set");
+
+                                var data = $("#practicedb").serializeArray();
+                                $.each(data, function (i, obj) {
+                                    sessionStorage.setItem(obj.name, obj.value);
+                                });
+                            });
+
+                    if (sessionStorage.getItem("flag") === "set") {
+
+//                $("header").before("<p>This for has saved data!</p>");
+
+                        var data = $("#practicedb").serializeArray();
+                        $.each(data, function (i, obj) {
+                            $("[name='" + obj.name + "']").val(sessionStorage.getItem(obj.name));
+                        });
+                    }
+
+                    $("#clearData2")
+                            .click(function (e) {
+                                e.preventDefault();
+                                sessionStorage.setItem("flag", "");
+                                location.reload();
+                            })
+                });
+            }
+  
+  
+  
+  
+  
   
   $(document).ready(function () {
                 $('textarea').on("load propertychange keyup input paste",
@@ -117,11 +161,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Recruitment/common/nav.php'; ?>
         
        
 
-        <button onclick="goBack()" id="button">Reload Previous Query</button><br><br>
+        <!--<button onclick="goBack()" id="button">Clear Previous Query</button><br><br>-->
         
-         
+        <button type="submit" value="Clear Previous Query" id="clearData2">Clear Previous Query</button><br><br>
 
-        <form action="/Recruitment/practice/index.php" method="post"> 
+        <form action="/Recruitment/practice/index.php" method="post" id="practicedb"> 
 
         <!--    <div class="practice"><input name="query" type="text" size="100"/><br><br></div> -->
             

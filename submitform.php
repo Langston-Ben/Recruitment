@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 
-<html>
+<html lang="en-us">
     <head>
 
         <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
@@ -129,9 +129,10 @@
                 </div><br>
                 <fieldset>
                     <legend>Please answer and submit the following:</legend><br>
-                    <p>Using the two tables above, write 5 different sql statements 
-                        to return the results below.<br> NOTE: You can NOT hard code ANY 
-                        filter VALUES. IE the where clause cannot be filtered by A,B,C or 1,2,3.</p>
+                    <p>Using the two tables above, write 5 different SQL statements 
+                        to return the results below.<br><br> NOTE: You can NOT hard code ANY 
+                        filter VALUES.<br>Please do not use the WHERE clause to filter
+                        by A,B,C or 1,2,3.<br>Using the WHERE clause will disqualify your answer.</p>
                     <h4>*Please note, input boxes are limited to 500 characters.*</h4>
                     <label>Please Enter Your Email Address For Tracking:<br> 
                         <input type="email" name="email" placeholder="joseph@smith.com"  

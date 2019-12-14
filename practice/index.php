@@ -44,11 +44,6 @@ switch ($action) {
             include '../results.php';
             exit;
         }
-//$query = "Select * from test where name = 'Jimmy Page'";
-//$query=(query);
-//$query=trim($query);
-//echo "<br><strong>Your Query was: </strong>".$query."<br><br>";
-//$query = query;
 
         try {
             $result = getTest($query);
@@ -74,8 +69,9 @@ switch ($action) {
                     $querylist .= '</tr>';
                 }
                 $querylist .= '</table>';
+                          
             }
-            $message = "<p><Your results are listed below</p>";
+            
             include '../results.php';
 //header("location:/Recruitment/results.php");
             exit;
@@ -85,41 +81,4 @@ switch ($action) {
             break;
         }
 
-//        
-//    default:
-//        
-//        include '../practice.php';
-//        break;
-        
-        
-//    case 'createform':
-//        
-//      $question1 = $_POST['question1'];  
-//        
-//      include '../pdf.php';
-//      break;
-//    
-//
-//
-//}
-//    echo $querylist;
-//echo '<table border="1">';
-//echo '<tr>';
-//foreach ($result[0] as $key => $value) {
-//    echo '<td>';
-//    echo $key;
-//    echo '</td>';
-//}
-//echo '</tr>';
-//foreach ($result as $row) {
-//    echo '<tr>';
-//    foreach ($row as $column) {
-//        echo '<td>';
-//        echo $column;
-//        echo '</td>';
-//    }
-//    echo '</tr>';
-//}
-//echo '</table>';
-// var_dump($result); 
 }

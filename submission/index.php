@@ -15,30 +15,13 @@ switch ($action) {
     case 'createform':
 
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-
-//      if(isset($email))
-//        $question1 = filter_input(INPUT_POST, 'question1', FILTER_SANITIZE_STRING);
-//        $question2 = filter_input(INPUT_POST, 'question2', FILTER_SANITIZE_STRING);
-//        $question3 = filter_input(INPUT_POST, 'question3', FILTER_SANITIZE_STRING);
-//        $question4 = filter_input(INPUT_POST, 'question4', FILTER_SANITIZE_STRING);
-//        $question5 = filter_input(INPUT_POST, 'question5', FILTER_SANITIZE_STRING);
-//        $question6 = filter_input(INPUT_POST, 'question6', FILTER_SANITIZE_STRING);
-//        $question7 = filter_input(INPUT_POST, 'question7', FILTER_SANITIZE_STRING);
-//        $question8 = filter_input(INPUT_POST, 'question8', FILTER_SANITIZE_STRING);
-//        $question9 = filter_input(INPUT_POST, 'question9', FILTER_SANITIZE_STRING);
-//        $question10 = filter_input(INPUT_POST, 'question10', FILTER_SANITIZE_STRING);
-//        $comments = filter_input(INPUT_POST, 'comments', FILTER_SANITIZE_STRING);
-
+        
         $question1 = filter_input(INPUT_POST, 'question1');
         $question2 = filter_input(INPUT_POST, 'question2');
         $question3 = filter_input(INPUT_POST, 'question3');
         $question4 = filter_input(INPUT_POST, 'question4');
         $question5 = filter_input(INPUT_POST, 'question5');
-//        $question6 = filter_input(INPUT_POST, 'question6');
-//        $question7 = filter_input(INPUT_POST, 'question7');
-//        $question8 = filter_input(INPUT_POST, 'question8');
-//        $question9 = filter_input(INPUT_POST, 'question9');
-//        $question10 = filter_input(INPUT_POST, 'question10');
+        
         $comments = filter_input(INPUT_POST, 'comments');
 
 
@@ -60,12 +43,7 @@ switch ($action) {
         $question2length = strlen($question2);
         $question3length = strlen($question3);
         $question4length = strlen($question4);
-        $question5length = strlen($question5);
-//        $question6length = strlen($question6);
-//        $question7length = strlen($question7);
-//        $question8length = strlen($question8);
-//        $question9length = strlen($question9);
-//        $question10length = strlen($question10);
+        $question5length = strlen($question5);       
         $commentslength = strlen($comments);
 
 
@@ -82,8 +60,7 @@ switch ($action) {
         }
 
 
-        //code for where filtering
-        //this section needs to cover scoring functionality
+        //this section covers scoring functionality
       
 
         $q1Points = 0;
